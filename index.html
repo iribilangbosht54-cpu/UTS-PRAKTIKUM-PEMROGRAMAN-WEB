@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prêt-à-Porter – Fashion Online</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <span class="logo-icon"></span>
+                <span class="logo-text"><em>Prêt-à-Porter</em></span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#beranda">Beranda</a></li>
+                    <li><a href="#koleksi">Koleksi</a></li>
+                    <li><a href="#keranjang">Keranjang</a></li>
+                    <li><a href="#tentang">Tentang</a></li>
+                    <li><a href="#pembelian" class="nav-cta">Pesan Sekarang!</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero" id="beranda">
+        <div class="hero-bg-text">STYLE</div>
+        <div class="hero-content">
+            <p class="hero-label">Koleksi Musim Ini</p>
+            <h1>Elegansi<br><em>Dalam Setiap</em><br>Langkah.</h1>
+            <p class="hero-desc">Dari setelan formal hingga setelan kasual — dirancang khusus untuk Anda yang berani tampil beda dan mempesona.</p>
+            <div class="hero-actions">
+                <a href="#koleksi" class="btn-primary">Lihat Koleksi</a>
+                <a href="#tentang" class="btn-ghost">Cerita Kami</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-img-box">
+                <div class="fashion-art">
+                    <div class="bag-handle"></div>
+                    <div class="bag-body">
+                        <span class="bag-logo"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-stat"><span>100+</span><small>Koleksi Desainer</small></div>
+            <div class="hero-badge">Top<br>Brand</div>
+        </div>
+    </section>
+
+    <div class="strip-banner">
+        <div class="strip-track">
+            <span>- GRATIS ONGKIR SELURUH INDONESIA</span>
+            <span>- GARANSI PENUKARAN 7 HARI</span>
+            <span>- KUALITAS BUTIK PREMIUM</span>
+            <span>- LAYANAN KONSULTASI GAYA</span>
+            <span>- GRATIS ONGKIR SELURUH INDONESIA</span>
+            <span>- GARANSI PENUKARAN 7 HARI</span>
+            <span>- KUALITAS BUTIK PREMIUM</span>
+            <span>- LAYANAN KONSULTASI GAYA</span>
+        </div>
+    </div>
+
+    <section id="koleksi" class="section-koleksi">
+        <div class="section-header">
+            <p class="section-label">Koleksi Unggulan</p>
+            <h2>Karya Pilihan<br>Para Pecinta Fashion</h2>
+        </div>
+
+        <div class="produk-grid">
+            <article class="kartu-produk">
+                <div class="kartu-badge">Terlaris</div>
+                <div class="kartu-img">
+                    <img src="Jersey.png" alt="Third Manchester United" class="gambar-produk-full">
+                </div>
+                <div class="kartu-body">
+                    <span class="kartu-kategori">Jersey</span>
+                    <h3>Third Manchester United</h3>
+                    <p>Jersey sang Raja.</p>
+                    <div class="kartu-footer">
+                        <div class="harga">Rp 1.699.000</div>
+                        <button class="btn-kartu" onclick="tambahKeKeranjang(1, 'Third Manchester United', 1699000, 'Jersey.png')">+ Keranjang</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="kartu-produk featured">
+                <div class="kartu-badge new">Baru</div>
+                <div class="kartu-img">
+                    <img src="workshirt.png" alt="Workshirt Black & White" class="gambar-produk-full">
+                </div>
+                <div class="kartu-body">
+                    <span class="kartu-kategori">Workshirt</span>
+                    <h3>Workshirt Black &  Whiter</h3>
+                    <p>Cocok untuk anak muda. Khususnya Starboy.</p>
+                    <div class="kartu-footer">
+                        <div class="harga">Rp 650.000</div>
+                        <button class="btn-kartu" onclick="tambahKeKeranjang(2, 'Workshirt Black & White', 650000, 'workshirt.png')">+ Keranjang</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="kartu-produk">
+                <div class="kartu-img">
+                    <img src="hodi.png" alt="Artisan Leather Tote" class="gambar-produk-full">
+                </div>
+                <div class="kartu-body">
+                    <span class="kartu-kategori">Jacket</span>
+                    <h3>The North Face Hoodie</h3>
+                    <p>Hoodie dengan kualitas bahan yang apik.</p>
+                    <div class="kartu-footer">
+                        <div class="harga">Rp 2.200.000</div>
+                        <button class="btn-kartu" onclick="tambahKeKeranjang(3, 'Artisan Leather Tote', 2200000, 'hodi.png')">+ Keranjang</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="kartu-produk">
+                <div class="kartu-img">
+                    <img src="flannel.png" alt="Suede Classic Loafers" class="gambar-produk-full">
+                </div>
+                <div class="kartu-body">
+                    <span class="kartu-kategori">Flannel Shirt</span>
+                    <h3>Beige Flannel</h3>
+                    <p>Bahan yang lembut, nyaman untuk dipakai seharian.</p>
+                    <div class="kartu-footer">
+                        <div class="harga">Rp 750.000</div>
+                        <button class="btn-kartu" onclick="tambahKeKeranjang(4, 'Beige Flannel', 750000, 'flannel.png')">+ Keranjang</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="keranjang" class="section-keranjang">
+        <div class="section-header">
+            <p class="section-label">Tas Belanja</p>
+            <h2>Keranjang Anda</h2>
+        </div>
+        <div class="keranjang-wrapper">
+            <div class="keranjang-list" id="keranjang-list">
+                </div>
+            <div class="keranjang-footer" id="keranjang-footer" style="display: none;">
+                <div class="keranjang-total">
+                    <span class="total-label">Total Belanja</span>
+                    <span class="total-amount" id="keranjang-total-text">Rp 0</span>
+                </div>
+                <a href="#pembelian" class="btn-primary">Lanjut ke Pembayaran →</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="tentang" class="section-tentang">
+        <div class="tentang-text">
+            <p class="section-label">Identitas Kami</p>
+            <h2>Lebih Dari Sekadar<br>Pakaian.</h2>
+            <p>Prêt-à-Porter berdiri di atas komitmen pada kualitas material dan presisi potongan. Setiap jahitan mencerminkan kepribadian unik Anda yang tidak bisa didikte oleh tren sesaat.</p>
+            <div class="tentang-stats">
+                <div class="stat-item"><span>10+</span><small>Desainer Lokal & Internasional</small></div>
+                <div class="stat-item"><span>50K+</span><small>Pelanggan Bahagia</small></div>
+                <div class="stat-item"><span>100%</span><small>Kain Premium</small></div>
+            </div>
+        </div>
+        <div class="tentang-visual">
+            <div class="tentang-card big">
+                <div class="leaf-art"></div>
+                <p>Bahan Berkualitas</p>
+                <small>Tekstur Lembut & Nyaman dipakai</small>
+            </div>
+            <div class="tentang-card small">
+                <p>Jahitan Presisi</p>
+                <small>Dikerjakan Oleh Ahli</small>
+            </div>
+        </div>
+    </section>
+
+    <section id="pembelian" class="section-form">
+        <div class="form-wrapper">
+            <div class="form-left">
+                <p class="section-label">Pemesanan</p>
+                <h2>Gayamu, <br>Aturanmu.</h2>
+                <p>Isi formulir di samping. Konfirmasi pesanan dan nomor resi akan dikirim melalui WhatsApp atau Email.</p>
+                <div class="form-info">
+                    <div class="info-item">✦ Pastikan melihat panduan ukuran.</div>
+                    <div class="info-item">✦ Pembayaran via Transfer / Kartu Kredit / COD</div>
+                    <div class="info-item">✦ Garansi retur/tukar ukuran hingga 7 hari</div>
+                </div>
+            </div>
+
+            <div class="form-container">
+                <form id="formPembelian" novalidate>
+                    
+                    <div class="form-group">
+                        <label for="namaLengkap">Nama Lengkap</label>
+                        <input type="text" id="namaLengkap" name="nama" placeholder="Masukkan nama Anda">
+                        <small class="pesan-error" id="error-nama"></small>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="emailPengguna">Alamat Email</label>
+                            <input type="email" id="emailPengguna" name="email" placeholder="contoh@email.com">
+                            <small class="pesan-error" id="error-email"></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="nomorHP">WhatsApp</label>
+                            <input type="text" id="nomorHP" name="hp" placeholder="08xx-xxxx-xxxx">
+                            <small class="pesan-error" id="error-hp"></small>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ukuran">Ukuran (Mayoritas)</label>
+                            <select id="ukuran" name="ukuran">
+                                <option value="">-- Pilih Ukuran --</option>
+                                <option value="S">S (Small / 39-40)</option>
+                                <option value="M">M (Medium / 41)</option>
+                                <option value="L">L (Large / 42-43)</option>
+                                <option value="XL">XL (Extra Large / 44)</option>
+                                <option value="All Size">All Size (Hanya Tas)</option>
+                            </select>
+                            <small class="pesan-error" id="error-ukuran"></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="catatan">Catatan (Opsional)</label>
+                            <input type="text" id="catatan" name="catatan" placeholder="Contoh: Gaun M, Sepatu 42">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="alamat">Alamat Pengiriman</label>
+                        <textarea id="alamat" name="alamat" rows="3" placeholder="Jl. .... No. ..., Kota, Provinsi, Kode Pos"></textarea>
+                        <small class="pesan-error" id="error-alamat"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label-section">Metode Pembayaran</label>
+                        <div class="radio-grid">
+                            <label class="radio-card">
+                                <input type="radio" name="metodeBayar" value="transfer">
+                                <span class="radio-icon">🏦</span>
+                                <span>Transfer Bank</span>
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="metodeBayar" value="ewallet">
+                                <span class="radio-icon">📱</span>
+                                <span>E-Wallet</span>
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="metodeBayar" value="cod">
+                                <span class="radio-icon">💳</span>
+                                <span>Kartu Kredit</span>
+                            </label>
+                        </div>
+                        <small class="pesan-error" id="error-metode"></small>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="persetujuan" name="persetujuan">
+                            <span>Saya setuju dengan kebijakan pengembalian barang dan memastikan pesanan benar.</span>
+                        </label>
+                        <small class="pesan-error" id="error-persetujuan"></small>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <span>Konfirmasi Pesanan</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                    
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div class="toast" id="toast"></div>
+
+    <div id="modalHapus" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-icon" style="color: #e74c3c; border-color: #e74c3c; background: rgba(231, 76, 60, 0.1);">🗑️</div>
+            <h3>Hapus Produk?</h3>
+            <p>Anda yakin ingin menghapus <strong id="modal-nama-produk" style="color:var(--gold);"></strong> dari keranjang belanja?</p>
+            <div style="display: flex; gap: 10px; margin-top: 20px;">
+                <button class="btn-ghost" style="flex: 1;" onclick="tutupModalHapus()">Batal</button>
+                <button class="btn-primary" style="flex: 1; background: #e74c3c; color: white; border: none;" onclick="konfirmasiHapus()">Ya, Hapus</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalSukses" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-icon">✓</div>
+            <h3>Pesanan Berhasil!</h3>
+            <p>Terima kasih telah berbelanja di Prêt-à-Porter. Detail pesanan dan nomor resi akan segera dikirimkan ke WhatsApp Anda.</p>
+            <button id="btnTutupModal" class="btn-primary" style="width: 100%; border:none; cursor:pointer;">Tutup Notifikasi</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <span class="logo-icon"></span>
+                <span class="logo-text"><em>Prêt-à-Porter</em></span>
+            </div>
+            <p class="footer-tagline">Pakaian eksklusif untuk gaya hidup modern Anda.</p>
+            <div class="footer-links">
+                <a href="#">Panduan Ukuran</a>
+                <a href="#">Kebijakan Pengembalian</a>
+                <a href="#">Hubungi Kami</a>
+            </div>
+            <p class="footer-copy">&copy; 2026 Prêt-à-Porter. Semua hak cipta dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
